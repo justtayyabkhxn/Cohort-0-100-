@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <center>
+    <h1>
+      <span>Hello This is the first heading </span>
+    </h1>
+
+    <h2 id="h2" onclick="changeColor()">
+      <span> Second heading </span>
+    </h2>
+
+    <body>
+      <div id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+        consectetur nostrum corrupti ex aperiam atque accusantium ipsa ab magnam
+        animi reprehenderit alias tempora eius, molestias consequuntur, expedita
+        cupiditate fugit dolore.
+        <br />
+      </div>
+      <button id="hide" onclick="hidePara()">Hide Para</button>
+      <button id="show" onclick="showPara()">Show Para</button>
+      
+      <button id="mouse" onmouseenter="mouseOver()" onmouseleave="mouseLeave()">Hover over me please</button>
+    </body>
+  </center>
+  <script>
+    function changeColor() {
+      const el = document.getElementById("h2");
+      el.style.color = "red";
+    }
+    const para = document.getElementById("para");
+    function hidePara() {
+      para.style.visibility = "hidden";
+    }
+    function showPara() {
+      para.style.visibility = "visible";
+    }
+    function mouseOver(){
+      const btn=document.getElementById("mouse");
+      btn.textContent="THE MOUSE IS OVER ME";
+      btn.style.backgroundColor="yellow";
+
+    }
+    function mouseLeave(){
+      const btn=document.getElementById("mouse");
+      btn.textContent="Hover over me please";
+      btn.style.backgroundColor="";
+    }
+  </script>
+</html>

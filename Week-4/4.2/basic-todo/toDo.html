@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <div class="mainheading">
+      <center>
+        <h1>To Do App</h1>
+      </center>
+    </div>
+  </head>
+  <body>
+    <div class="mainContainer" id="mainContainer">
+      <center>
+        <div class="operationContainer" id="operationContainer">
+          <div class="titleDiv">
+            <span>Task Title: </span>
+            <input type="text" name="Title" id="titleBox"  placeholder="Buy veggies"  />
+          </div>
+          <br /><br />
+          <div class="descriptionDiv">
+            <span>Task Description: </span>
+            <input
+              type="text"
+              name="Description"
+              id="descriptionBox"
+              placeholder="Buy potato, tomato, onion."
+              style="height: 50px; width: 500px"
+              required
+            />
+          </div>
+          <br />
+          <button type="submit" onclick="addTask()" id="btn">Add Task</button>
+        </div>
+      </center>
+      <br />
+      <center>
+        <div
+          class="listContainer"
+          id="listContainer"
+          style="border: 0.5px solid black"
+        ></div>
+      </center>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>

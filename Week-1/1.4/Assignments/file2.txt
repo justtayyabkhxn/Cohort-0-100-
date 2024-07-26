@@ -1,0 +1,2 @@
+Provided String: Tayyab     Loves    Zoya   
+Printed Stringk kl: Tayyab Loves Zoya 

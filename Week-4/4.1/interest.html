@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interest Calculator</title>
+    <center>
+      <h1>
+        <span> CALCULATE INTEREST </span>
+      </h1>
+    </center>
+  </head>
+  <body>
+    <center>
+      <div class="container">
+        <input
+          type="number"
+          name="p"
+          id="prinicpal"
+          placeholder="Prinicpal amount"
+        />
+        <input type="number" name="r" id="rate" placeholder="Rate" />
+        <input type="number" name="t" id="time" placeholder="Time" />
+      </div>
+      <br /><br />
+      <button type="button" id="btn" onclick="calculate()">Calculate</button>
+      <br><br>
+      <div id="finalans"></div>
+    </center>
+  </body>
+  <script>
+    function calculate() {
+      const p = document.getElementById("prinicpal").value;
+      const r = document.getElementById("rate").value;
+      const t = document.getElementById("time").value;
+      getresponse(p,r,t);
+    }
+    async function getresponse(p,r,t){
+        const response=await fetch("https://sum-server.100xdevs.com/interest?principal="+p+"&rate="+r+"&time="+t);
+        const ansJson=await response.json();
+        document.getElementById("finalans").innerHTML=`The final amount is: ${ansJson.total} and the interest is: ${ansJson.interest}`;
+    }
+  </script>
+</html>

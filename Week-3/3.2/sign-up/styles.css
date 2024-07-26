@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+h1 {
+  font-weight: 600;
+}
+.container {
+  border: solid black 0.5px;
+  padding: 30px;
+  margin: 50px 50px;
+}
+.container input{
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+.container span{
+    font-size: 1.3rem;
+}
+button{
+    transition: all 0.2s;
+    padding: 5px;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.1);
+    color: brown;
+}

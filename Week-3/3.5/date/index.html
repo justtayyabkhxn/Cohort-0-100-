@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date</title>
+    <div class="heading">
+      <h1>
+        <span>
+          <center>Today</center>
+        </span>
+      </h1>
+    </div>
+  </head>
+  <body>
+    <center>
+      <div id="date"></div>
+
+      <button type="button" onclick="getDate()">Get Date</button>
+    </center>
+    <br />
+    <center>
+      <button type="button" onclick="makeElement()">Make Element</button>
+    </center>
+    <center>
+      <div id="new"></div>
+    </center>
+    <br />
+    <center>
+      <button type="button" onclick="deleteElement()">Delete Element</button>
+    </center>
+  </body>
+  <script>
+    function getDate() {
+      const dateEl = document.getElementById("date");
+      dateEl.innerHTML = `Todays date is: ${Date()}`;
+    }
+    function makeElement() {
+      const newpara = document.createElement("p");
+      newpara.innerHTML = "Hello new Element added";
+      const el = document.getElementById("new");
+      el.appendChild(newpara);
+    }
+    function deleteElement() {
+      const el = document.getElementById("new");
+      while (el.firstChild) {
+        el.removeChild(el.firstChild);
+      }
+    }
+  </script>
+</html>
